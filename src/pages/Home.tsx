@@ -6,7 +6,7 @@ export default function Home() {
   const [summary, setSummary] = useState('');
 
   const handleSubmit = async () => {
-    const res = await fetch('http://localhost:8000/summarize', {
+    const res = await fetch('https://rocky-sre-ai-assistant-backend.onrender.com/summarize', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ text: rawInput }),
